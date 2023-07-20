@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>HubSpot/next</title>
+</head>
+<app-adminheader></app-adminheader>
+
+<form [formGroup]="aForm" (ngSubmit)="adminBooking(aForm)">
+    <!-- id:<input type="text" formControlName="id"/> -->
+    roomName:<input type="text" formControlName="roomName"/><br/><br/>
+    capacity:<input type="text" formControlName="capacity"/><br/><br/>
+    location:<input type="text" formControlName="location" /><br/><br/>
+    price:<input type="date" formControlName="price" /><br/><br/>
+    details<input type="date" formControlName="details" /><br/><br/>
+    imgurl:<input type="number" min="1" max="10" formControlName="imgurl" /><br/><br/>
+    
+    <button>submit</button>
+</form>
+<!-- <form (ngSubmit)="BookDelete()"> -->
+    <div *ngFor="let aObj of aList" >
+        <img [src]="aObj.imgurl" />
+        <!-- <mat-card-content>{{cObj.fullname}}</mat-card-content> -->
+        <!-- <mat-card-content>{{cObj.id}}</mat-card-content> -->
+        <!-- <mat-card-content>{{cObj.fulladdress}}</mat-card-content>
+        <mat-card-content>{{cObj.contactnumber}}</mat-card-content>
+        <mat-card-content>{{cObj.alternatecontactnumber}}</mat-card-content>
+        <mat-card-content>{{cObj.name}}</mat-card-content>
+        <mat-card-content>{{cObj.amount}}</mat-card-content>
+        <mat-card-content>{{cObj.quantity}}</mat-card-content> -->
+        <button (click)="delUser(aObj.roomId)">deletebook</button>
+    </div>
+   
+<!-- </form> -->

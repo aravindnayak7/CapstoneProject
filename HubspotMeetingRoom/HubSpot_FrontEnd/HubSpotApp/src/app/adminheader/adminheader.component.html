@@ -1,0 +1,63 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>HubSpot</title>
+  </head>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: gray;">
+      <div class="container-fluid m-2">
+       
+        <small class="navbar-brand " href="#"><img  class="h-8 w-10" width="100px" height="2%" src="../../assets/logoMeet.png"/></small>
+        <div class="collapse navbar-collapse " style="background-color: light;" id="navbarTogglerDemo03">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+            
+            <li class="nav-item">
+             <!-- without login --> 
+              <a class="nav-link active font-bold" routerLink="/admindash">HUBSPOT</a>
+            </li>
+           <span class="nav-item"></span>
+            <li class="nav-item">
+              <a class="nav-link active font-bold" routerLink="/crud">Add Room</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" routerLink="/career">Workplace</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active font-bold " routerLink="/adminview">Delete Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active font-bold" routerLink="/bookinghistory">All Bookings</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" routerLink="/adminadditem">Update Room</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active font-bold" aria-current="page"  routerLink="/settings">settings</a>
+            </li>
+           
+          </ul>
+          <div class="nav-item mb-3 m-2">
+                <!-- <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" routerLink="/login">Login here</button>  -->
+               </div> <div class="nav-item mb-3 m-2" >
+                <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" routerLink="/userprofile">AdminProfile
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+            </div>
+            <div class="dropdown bg-blend-darken">
+                <img class="dropdown-toggle" width="30px" src="../../assets/icons8-globe-94.png" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" />
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">SN</a></li>
+                  <li><a class="dropdown-item" href="#">IN</a></li>
+                  <li><a class="dropdown-item" href="#">AU</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </nav>
+</header>
+    

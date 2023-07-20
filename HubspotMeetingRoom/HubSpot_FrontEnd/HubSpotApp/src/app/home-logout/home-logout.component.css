@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap');
+#font{
+  font-family: 'Ysabeau Office', sans-serif;
+    font-size: 30px;
+}
+#font1{
+    font-family: 'Marck Script', cursive;
+
+    font-size: 50px;
+    color:black
+}
+* {
+        /* margin: 0px;
+        padding: 0px;
+        box-sizing: border-box; */
+      }
+     
+      .container{
+          position: relative;
+          height: 100%;
+          width: 100%;
+          font-family: Arial, Helvetica, sans-serif;
+        scroll-behavior: smooth;
+        background: #FFFDD0;
+      }
+      .image {
+        position: relative;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .imgfirst {
+        background-image: url("../../assets/interiorroom.png");
+        min-height: 100vh;
+      }
+
+      .imgsecond {
+        background-image: url("../../assets/conference.png");
+        min-height: 500px;
+      }
+
+      /* .imgthird {
+        background-image: url("../../assets/chairs-gdd33abce8_1280.jpg");
+        min-height: 500px;
+      } */
+
+      .scroll{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+      }
+
+      .scroll .fa {
+        color: #fff;
+        font-weight: 200;
+        text-decoration: none;
+        font-size: 100px;
+        animation: scroll 2s infinite;
+      }
+      @keyframes scroll {
+        0%,
+        10%,
+        20%{
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-30px);
+        }
+        60% {
+          transform: translateY(-15px);
+        }
+      }
+      .box {
+        position: relative;
+        color: #111110;
+        background-color: #fff;
+        padding: 40px 70px;
+      }
+      .box h3 {
+        text-transform: uppercase;
+        padding: 20px 0px;
+        font: 20px "Lato", sans-serif;
+        color: #111;
+        text-align: center;
+        font-weight:bold;
+        background: rgb(245, 217, 164);
+        border-radius: 10px;
+      }
+      .box p {
+        /* text-transform: capitalize; */
+        font-size: 22px;
+        word-spacing: 10px;
+        text-align: center;
+        line-height:2;
+        background: #FFFDD0;
+        border-radius: 10px;
+      }
+footer{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background:#fff;
+  padding:20px;
+  text-align: center;
+  font-family:monospace;
+}
+.footer a{
+  padding:5px 5px;
+  text-decoration:none;
+  font-size: 25px;
+  font-weight:bold;
+  color: #000;
+  animation:anim 3.0s linear infinite ;
+}
+@keyframes anim{
+    0%{
+        border-top:3px solid #000;
+    }
+    25%{
+        border-left:3px solid #000;
+    }
+    50%{
+        border-bottom:3px solid #000;
+    }
+    75%{
+        border-right:3px solid #000;
+    }
+}
+.button {
+  width: 200px;
+  height: 60px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: orange;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin-top: 40%;
+  padding: 7%;
+  }
+
+.button:hover {
+  background-color: #ff8000;
+  box-shadow: 0px 15px 20px rgba(135, 93, 33, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+#fontquote{
+  font-family: 'Signika', sans-serif;
+  font-size: 18px;
+}

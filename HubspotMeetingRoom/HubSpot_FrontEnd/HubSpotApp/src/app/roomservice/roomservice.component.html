@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="container  ">
+  <div *ngFor="let room of rList" class="flex-col">
+      <div style="margin: 10%; width: 500px; height:100% ">
+        <mat-accordion>
+          <mat-expansion-panel style="width: 90%;"
+           (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header style="height:fit-content; width: fit-content;">
+
+
+              
+              <img mat-card-image src={{room.imgurl}} alt="images is not loaded" style="height: 50%;"> 
+              
+                     
+            </mat-expansion-panel-header>
+
+            <b>
+              <!-- {{room.roomId}}
+              <br>  -->
+             Room Details : &nbsp; {{room.details}}
+              <br>
+             Room Name : &nbsp; {{room.roomName}}
+              <br>
+             Room Price : &nbsp; {{room.price}}
+              <br>
+             Room Location : &nbsp; {{room.location}}
+              <br>
+             Room Capacity or no of people : &nbsp; {{room.capacity}}
+            </b>
+            <mat-action-row>
+              <button mat-button color="warn" (click)="getRoomById(room.roomId)"></button>
+              <button  class="btn btn-outline-success btn-lg" color="warning" (click)="bookRoom(room.roomId)">Book Now</button>
+            </mat-action-row> 
+          </mat-expansion-panel>
+        </mat-accordion>
+        </div>      
+    </div>
+  </div>

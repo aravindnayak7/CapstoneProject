@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+    box-sizing: border-box;
+}
+
+.body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: medium;
+    
+}
+
+.container{
+    margin: 430px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-size: medium;
+    background-color: #f2f2f2;
+    padding: 8px 20px 15px;
+    border: 2px solid grey;
+    border-radius: 4px;
+}
+input[type='text'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='date'],
+input[type='pincode']{
+
+    width: 50%;
+    padding: 10px;
+    border: 2px solid;
+    border-color: #ccc;
+    border-radius: 4px;
+}
+select,
+textarea{
+    margin: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 2px solid;
+    border-color: #ccc;
+    border-radius: 4px;
+}
+
+fieldset{
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+}
+
+.heading{
+    text-align: center;
+}
+
+input[type='submit']{
+    font-size: x-large;
+    color: white;
+    background-color: rgb(31, 148, 84);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+}
+
+input[type='submit']:hover{
+   background-color: rgb(155, 235, 155);
+}
+</style>
+</head>
+    <div class="container" >
+    <title>Payment GateAway</title>
+    <h1 class="heading" >Payment </h1>
+    <hr>
+    
+
+<body>
+    <div class="hello">
+<form action="mailto:someone@example.com" method="post" enctype="text/plain" size="20px">
+        <h2>Contact information</h2>
+        <p> Name *: <input placeholder="Enter you Name here" type="text" name="name" id="name" required></p>
+        <!--If you are using a radio input then you should keep the name attribute of all the options same then only the user will be able to select one of them.-->
+        
+        <fieldset>
+            <legend>Gender *</legend><p> Male: <input type="radio" required name="Gender" id="Male"> 
+         Female: <input type="radio" name="Gender" required id="Female"></p></fieldset> 
+         <p>Address: <textarea placeholder="Enter your address here" name="Address" id="Address" cols="50" rows="5"></textarea></p>
+         <p> Email *:<input placeholder="Email - 123abc@mail.com" type="email" name="Email" required id="Email"></p>
+         <p>Pin code <input placeholder="1100xx" type="number" name="Pin code" id="Pin code"></p>
+         <br>
+         <h2>Payment Information</h2>
+         <p> Select Card Type <select name="Card_type" id="Card type">
+             <!--In order to enable the option in card type you should create a first option with the value of nothing.-->
+             <p><option value=""> Select card Type </option></p>
+             <p><option value="Rupay">Rupay</option></p>
+             <p><option value="Visa">Visa</option></p>
+             <p><option value="Mastercard">Mastercard</option></p> <br> </select></p>
+
+              
+             
+            <p>
+                 Expiration date : <input type="date" name="exp_date" id="exp_date">
+             <br>
+             <p>CVV <input placeholder="Three digit number behind your card" type="password" name="CVV" id="CVV">
+             <br/>
+             <br/>
+             Transfer Money:<br>
+         <input type="text" placeholder="Enter amount" name="Payment Received Successfully.Rs" size="30">
+             </p>
+             <p> <input type="submit" value="Pay now"></p>
+         
+
+    </form>
+
+</div>    
+</body>
+</div>
+</html>

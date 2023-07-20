@@ -1,0 +1,27 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>HubSpot</title>
+</head>
+<app-adminheader></app-adminheader>
+<div class="notecard-container flex-d-row">
+<mat-card class="note-card flex-wrap w-50" *ngFor="let cObj of cusList" >
+    
+    <mat-card-content>User Name : {{cObj.username}}</mat-card-content><br/><br/>
+    <!-- <mat-card-content>{{cObj.id}}</mat-card-content> -->
+    <mat-card-content>Room destination : {{cObj.designation}}</mat-card-content><br/><br/>
+    <mat-card-content>User Email :{{cObj.email}}</mat-card-content><br/><br/>
+    <mat-card-content>Check-In date : {{cObj.checkin}}</mat-card-content><br/><br/>
+    <mat-card-content>check-Out Date :{{cObj.checkout}}</mat-card-content><br/><br/>
+    <mat-card-content>No of rooms : {{cObj.numberofRooms}}</mat-card-content><br/><br/>
+    <mat-card-content>No of Persons :{{cObj.person}}</mat-card-content><br/><br/>
+    <mat-card-content>Room Loaction : {{cObj.location}}</mat-card-content><br/><br/>
+    <mat-card-content>No of Hr :{{cObj.duration}}</mat-card-content><br/><br/>
+    <p></p>
+    <button class="btn btn-danger backdrop-brightness-105" (click)="delUser(cObj.bookingId)">delete booked Room</button>
+    
+</mat-card><br/><br/>
+</div>
+

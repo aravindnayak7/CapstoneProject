@@ -1,0 +1,63 @@
+
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparent Login</title>
+</head>
+<body>
+  <div class="ms-5 col-sm-10">
+    <input type="button" class="btn btn-success"  routerLink="/home" value="home"/>
+  </div>
+<div class=" w-50 container-fluid rounded-3 lg:w-1/3 md:w-1/2 bg-white flex flex-col ms-5 w-full md:py-8 mt-8 md:mt-0 align-self-center"> 
+    
+    <form class="form-box bg-light m-2 mt-4" [formGroup]="loginform" (ngSubmit)="login()">
+      <h1 class="ms-1 mb-3 fs-6 fw-bold fs-6 mt-4 text-center ">Login Details</h1>
+      <div class="mb-3 row m-2 ms-1 w-auto">
+        <div class="form-floating mb-3 mt-3 ">
+          <input type="email" class="form-control rounded-2" id="email" placeholder="name@example.com" formControlName="email">
+          <label for="email" class="ms-3">Email address</label>
+          <div *ngIf="loginform.controls['email'].errors && loginform.controls['email'].touched" class="error-message">
+            <div *ngIf="loginform.controls['email'].errors['required']">Please enter your email.</div>
+            <div *ngIf="loginform.controls['email'].errors['email']">Please enter a valid email address.</div>
+          </div>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control rounded-2" id="password" placeholder="Password" formControlName="password">
+          <label for="" class="ms-3">Password</label>
+          <div *ngIf="loginform.controls['password'].errors && loginform.controls['password'].touched" class="error-message">
+            Please enter your password length > 5.
+          </div>
+        </div>
+        <div class="ms-5 mb-3 mt-4">
+          <div class="ms-5 col-sm-10">
+            <input type="submit" class="btn btn-outline-primary btn-lg align-self-center align-content-center" [disabled]="loginform.invalid" error="Enter Details" value="Login"/>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label class="col-sm-12 text-center"><h3>Don't have an account? <span><h3 href="#" class="text-primary text-capitalize" routerLink="/register">Click Here</h3></span></h3></label>
+        </div>
+      </div>
+    </form>
+</div>
+</body>
+</html>
+
+
+
+<!-- 
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transparent Login</title>
+</head>
+
+
+</html> -->

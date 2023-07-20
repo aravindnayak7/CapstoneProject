@@ -1,0 +1,137 @@
+
+  <app-header></app-header>
+<div class="body">
+  <div class="container">
+
+        <div class="wrapper animated bounceInLeft">
+
+      <div class="company-info">
+
+        <h3>Book Meeting Room Now</h3>
+
+        <ul>
+
+          <li><i class="fa fa-road"></i> Mumbai(Pune)</li>
+
+          <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+
+          <li><i class="fa fa-envelope"></i> Hubspot@gmail.com</li>
+
+         
+        </ul>
+        <img src="{{room.imgurl}}" alt="no image for this room">
+        Room details : <p class="text-primary font-medium">{{room.details}}</p>
+      </div>
+
+      <div class="contact">
+
+        <h3 class="" > Room Name : <span class="font-size text-primary">{{room.roomName}}</span> </h3>
+        <h3> Room price : <span class="font-size text-primary">{{room.price}} </span></h3>
+        <h3> room location : <span class="font-size text-primary">{{room.location}}</span></h3>
+        <h3></h3>
+        <form id="contactForm" [formGroup]="cusForm" (ngSubmit)="cusBooking(cusForm)">
+
+          <p>
+
+            <label>userName</label>
+
+            <input type="text" formControlName="username" id="name">
+
+          </p>
+
+          <p>
+
+            <label>Designation</label>
+
+            <input type="text" formControlName="designation" id="company">
+
+          </p>
+
+          <p>
+
+            <label>Email</label>
+
+            <input type="text" formControlName="email" id="email" value="">
+
+          </p>
+
+          <p>
+
+            <label>Check-in</label>
+
+            <input type="date" formControlName="checkin" id="phone">
+
+          </p>
+
+          <p class="full">
+
+            <label>Check-out</label>
+
+            <input type="date" formControlName="checkout" id="phone">
+
+          </p>
+
+          <p class="full">
+
+            <label>No. of Room</label>
+
+            <input type="number" formControlName="numberofRooms"   id="phone">
+
+          </p>
+
+          <p class="full">
+
+            <label>Person</label>
+
+            <input type="number" formControlName="person" id="phone">
+
+          </p>
+          <p class="full">
+          location: <input type="text" name="loaction" formControlName="location" id="loc" readonly value="{{room.location}}">
+          </p>
+          <!-- <mat-form-field>
+
+            <mat-label>Places</mat-label>
+
+            <select matNativeControl required formControlName="location">
+
+              <option value="volvo" name="location">Pune</option>
+
+              <option value="saab" name="location">Hinjewadi</option>
+
+              <option value="mercedes" name="location">Mumbai</option>
+
+              <option value="audi" name="location">Hyderabad</option>
+
+            </select>
+
+          </mat-form-field> -->
+
+          <p class="full">
+
+            <label>Duration in Hours</label>
+
+            <input type="text" formControlName="duration" id="phone">
+
+          </p>
+          <app-additem></app-additem>
+          
+          <p class="full">
+
+            <button type="submit">Submit</button>
+
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+ 
+
+ 
+
+

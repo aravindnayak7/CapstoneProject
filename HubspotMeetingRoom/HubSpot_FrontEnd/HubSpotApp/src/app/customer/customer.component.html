@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>HubSpot</title>
+</head>
+<app-header></app-header>
+<!-- <form [formGroup]="cusForm" (ngSubmit)="cusBooking(cusForm)"> -->
+    <!-- id:<input type="text" formControlName="id"/> -->
+    <!-- userName:<input type="text" formControlName="username"/><br/><br/>
+    Designation:<input type="text" formControlName="designation"/><br/><br/>
+    Email:<input type="text" formControlName="email" /><br/><br/>
+    Check-in:<input type="date" formControlName="checkin" /><br/><br/>
+    Check-out:<input type="date" formControlName="checkout" /><br/><br/>
+    No. of Room:<input type="number" min="1" max="10" formControlName="numberofRooms" /><br/><br/>
+    Person:<input type="number" min="1" max="10" formControlName="person" /><br/><br/>
+    location:<input type="text" formControlName="location" /><br/><br/>
+    Duration in Hours:<input type="number" formControlName="duration" /><br/><br/>
+    <button>submit</button>
+</form> -->
+<!-- <form (ngSubmit)="BookDelete()"> -->
+    <mat-card *ngFor="let cObj of cusList" >
+    
+        <mat-card-content>{{cObj.username}}</mat-card-content>
+        <!-- <mat-card-content>{{cObj.id}}</mat-card-content> -->
+        <mat-card-content>{{cObj.designation}}</mat-card-content>
+        <mat-card-content>{{cObj.email}}</mat-card-content>
+        <mat-card-content>{{cObj.checkin}}</mat-card-content>
+        <mat-card-content>{{cObj.checkout}}</mat-card-content>
+        <mat-card-content>{{cObj.numberofRooms}}</mat-card-content>
+        <mat-card-content>{{cObj.person}}</mat-card-content>
+        <mat-card-content>{{cObj.location}}</mat-card-content>
+        <mat-card-content>{{cObj.duration}}</mat-card-content>
+        <button (click)="delUser(cObj.bookingId)">deletebook</button>
+    </mat-card>
+   
+<!-- </form> -->

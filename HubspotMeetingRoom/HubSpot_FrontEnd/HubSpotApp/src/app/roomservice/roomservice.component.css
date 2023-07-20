@@ -1,0 +1,46 @@
+/* /* .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .container > div
+    flex: 0 0 33%; /* Each element occupies one-third of the container's width 
+    padding: 10px; /* Adjust the padding as desired 
+    box-sizing: border-box; /* Include padding in element's total width 
+  }
+  
+ 
+  
+  .container img {
+    width: 100%;
+    height: auto;
+    object-fit:scale-down /* Maintain aspect ratio and fill the container 
+  }
+   */
+
+
+   .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: scale3d(1, 1, 1);
+  transition: all 0.2s ease-out, filter 0.75s ease-out;
+  }
+  
+  .container > div {
+    flex: 0 0 25%; /* Adjust the width as needed */
+    margin: 10px;
+  }
+  
+  .mat-expansion-panel-header {
+    height: fit-content;
+    width: fit-content;
+  }
+  
+  .mat-expansion-panel-header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+   

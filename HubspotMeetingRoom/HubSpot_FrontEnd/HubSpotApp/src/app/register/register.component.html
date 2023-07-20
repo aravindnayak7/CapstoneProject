@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.component.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <form [formGroup]="registerform" (ngSubmit)="register()">
+            <div class="title">Registration</div>
+            <div class="user_details">
+                <div class="input_pox">
+                    <span class="datails">First Name</span>
+                    <input type="text" class="form-control" placeholder="First Name" formControlName="firstName">
+                    <div *ngIf="registerform.controls['firstName'].invalid && (registerform.controls['firstName'].dirty || registerform.controls['firstName'].touched)"
+                        class="error-message">
+                        <span *ngIf="registerform.controls['firstName'].errors"  class="text-danger">First Name is required.</span>
+                    </div>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Last Name</span>
+                    <input type="text" class="form-control" placeholder="Last Name" id="lastName" formControlName="lastName">
+                    <div *ngIf="registerform.controls['lastName'].invalid && (registerform.controls['lastName'].dirty || registerform.controls['lastName'].touched)"
+                        class="error-message">
+                        <span *ngIf="registerform.controls['lastName'].errors"  class="text-danger">Last Name is required.</span>
+                    </div>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Age</span>
+                    <input type="number" class="form-control" placeholder=" > 18" formControlName="age" min=18>
+                    <div *ngIf="registerform.controls['age'].invalid && (registerform.controls['age'].dirty || registerform.controls['age'].touched)"
+                        class="error-message">
+                        <span *ngIf="registerform.controls['age'].errors"  class="text-danger">Age is required.</span>
+                        <span *ngIf="registerform.controls['age'].errors"  class="text-danger">You should be at least 18 years old.</span>
+                    </div>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Email</span>
+                    <input type="email" class="form-control" placeholder="name@example.com" id="email" formControlName="email">
+                    <div *ngIf="registerform.controls['email'].invalid && (registerform.controls['email'].dirty || registerform.controls['email'].touched)"
+                        class="error-message">
+                        <span *ngIf="registerform.controls['email'].errors"  class="text-danger">Email is required.</span>
+                        <span *ngIf="registerform.controls['email'].errors"  class="text-danger">Invalid email format.</span>
+                    </div>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Phone Number</span>
+                    <input type="number" placeholder="enter your Phone" id="mobileNumber" formControlName="mobileNumber" minlength="10" maxlength="10" pattern="[0-9]{10}" >
+                    <div *ngIf="registerform.controls['mobileNumber'].invalid && (registerform.controls['mobileNumber'].dirty || registerform.controls['mobileNumber'].touched)"
+                        class="error-message">
+                        <span *ngIf="registerform.controls['mobileNumber'].errors"  class="text-danger">Phone Number is required.</span>
+                        <span *ngIf="registerform.controls['mobileNumber'].errors"  class="text-danger">Invalid phone number format.</span>
+                    </div>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Company Name</span>
+                    <input type="text" class="form-control" placeholder="Company Name" id="companyName" formControlName="companyName">
+                    <div *ngIf="registerform.controls['companyName'].invalid && (registerform.controls['companyName'].dirty || registerform.controls['companyName'].touched)"
+                        class="error-message">
+                        <small *ngIf="registerform.controls['companyName'].errors" class="text-danger">*Company Name is required.</small>
+                    </div>
+                </div>
+                <div class="input_pox">
+                    <span class="datails">Password</span>
+                    <input type="password" placeholder="enter your Password" id="password" formControlName="password">
+                    <div *ngIf="registerform.controls['password'].invalid && (registerform.controls['password'].dirty || registerform.controls['password'].touched)"
+                        class="error-message">
+                        <small *ngIf="registerform.controls['password'].errors"  class="text-danger">*Password is required.</small>
+                    </div>
+                </div>
+            </div>
+            <div class="gender_details">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender_title"> Gender</span>
+                <div class="category">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register" [disabled]="registerform.invalid">
+            </div>
+            <div class="input_pox">
+                <a class="back" href="#" routerLink="/login">
+                    <h1>Back to login</h1>
+                </a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
